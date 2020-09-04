@@ -13,6 +13,7 @@ sudo apt -y install acpi iotop nethogs
 sudo apt -y install libfdk-aac-dev
 
 cd ..
+git clone https://github.com/colinporth/linux
 git clone https://github.com/colinporth/shared
 git clone https://github.com/colinporth/openGL
 git clone https://github.com/colinporth/ffplay
@@ -24,7 +25,10 @@ git clone https://github.com/colinporth/opt
 mkdir -p tv
 chmod 0777 tv
 
-cd shared
+cd linux
+git pull
+
+cd ../shared
 git pull
 
 cd ../openGL
@@ -58,3 +62,5 @@ chmod 0777 configure
 chmod 0777 ffmpeg
 
 ls -l
+cd ../linux
+
