@@ -1,0 +1,17 @@
+set -v
+
+cd ../FFmpeg
+git pull
+
+mkdir -p build
+cd build
+make -j4
+ls -l
+
+cd ../../ffplay
+git pull
+make -j4
+ls -l
+
+
+

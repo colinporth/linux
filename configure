@@ -1,0 +1,30 @@
+set -v
+
+cd ../FFmpeg
+git pull
+
+mkdir -p build
+cd build
+../configure \
+  --disable-decoders --disable-encoders --disable-filters --disable-parsers --disable-protocols --disable-bsfs \
+  --disable-demuxers --disable-muxers   --disable-indevs  --disable-outdevs --disable-doc --disable-ffprobe \
+  --disable-vaapi --disable-vdpau \
+  --enable-protocol=concat,file \
+  --enable-demuxer=mpegts,mp2,mp3,aac,h264,pcm_s16le,mjpeg,dvbsub \
+  --enable-parser=aac,h264,mpeg4video,mpegvideo,mpegaudio,mjpeg,aac_latm,dvbsub \
+  --enable-decoder=mp2,mp3,aac,h264,mpeg2video,mpeg4,mjpeg,aac_latm,dvbsub \
+  --enable-bsf=aac_adtstoasc \
+  --enable-filter=transpose,aresample \
+  --enable-outdev=sdl2 \
+  --enable-gpl \
+  --enable-nonfree
+make -j4
+ls -l
+
+cd ../../ffplay
+git pull
+make -j4
+ls -l
+
+
+
