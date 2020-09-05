@@ -269,6 +269,8 @@ cmake -DOPENVX_INCLUDES=$OPENVX_DIR/include -DOPENVX_LIBRARIES=$OPENVX_DIR/bin/l
 ./vxPop --donut
 }}}
 
+/etc/rc.local
+
 sudo apt -y install xserver-xorg
 sudo apt -y install raspberrypi-ui-mods
 sudo apt -y install lxde-core lxappearance
