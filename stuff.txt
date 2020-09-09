@@ -21,6 +21,8 @@ sudo raspi-config
   - audio force 3.5
 }}}
 
+sudo apt -y install libgtk-3-dev
+
 mkdir /home/pi/tv
 chmod 0777 /home/pi/tv
 
