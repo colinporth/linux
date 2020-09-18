@@ -271,7 +271,62 @@ cmake -DOPENVX_INCLUDES=$OPENVX_DIR/include -DOPENVX_LIBRARIES=$OPENVX_DIR/bin/l
 ./vxPop --donut
 }}}
 
+{{{  build pulseview
+git clone https://github.com/sigrokproject/libsigrok
+sudo apt -y install doxygen
+./autogen.sh
+./configure
+make
+sudo make install
+
+git clone https://github.com/sigrokproject/libsigrokdecode
+./autogen.sh
+./configure
+make
+sudo make install
+
+git clone git://sigrok.org/pulseview.git
+sudo apt install libsigrokcxx-dev
+sudo apt -y install libglib2.0
+sudo apt -y install libglib2.0-dev
+sudo apt -y install libgtkmm-3.0-dev
+sudo apt -y install qt5-default
+sudo apt -y install qtdeclarative5-dev
+sudo apt -y install qttools5-dev-tools
+sudo apt -y install qttools5-dev
+sudo apt -y install libqt5svg5-dev
+sudo apt -y install libboost-all-dev
+cd pulseview
+cmake .
+make
+}}}
+
 /etc/rc.local
+dtc -I dtb -O dts *.dtb
+
+git clone https://github.com/mypaint/libmypaint
+sudo apt -y install intltool
+sudo apt -y install libjson-c-dev
+cd libmypaint
+./autogen.sh
+./configure
+make
+sudo make install
+
+git clone https://github.com/mypaint/mypaint-brushes
+cd mypaint-brushes
+./autogen.sh
+./configure
+make
+sudo make install
+
+git clone https://github.com/mypaint/mypaint
+cd mypaint
+
+git clone https://github.com/json-c/json-c.git
+mkdir build
+cd build
+cmake ..
 
 sudo apt -y install xserver-xorg
 sudo apt -y install raspberrypi-ui-mods

@@ -1,0 +1,161 @@
+# For more options and information see
+# http://www.raspberrypi.org/documentation/configuration/config-txt.md
+# Some settings may impact device functionality. See link above for details
+# for use with Google Nexus 7 Gen1 (2012) display modules
+# - CPT CLAA070WP03XG
+# - HYDIS HV070WX2-1E0
+# by Joerg Quinten, aBUGSworstnightmare
+
+dtoverlay=dpi24
+disable_overscan=1
+
+# uncomment the following to adjust overscan. Use positive numbers if console
+# goes off screen, and negative if there is too much border
+#overscan_left=0
+#overscan_right=0
+#overscan_top=0
+#overscan_bottom=0
+
+# set display orientation
+display_rotate=3
+
+# uncomment to force a console size. By default it will be display's size minus
+# overscan.
+framebuffer_width=1280
+framebuffer_height=760
+# still have to figure out why 1280x800 gives black border left and right (40pixels
+# each)
+
+# Enable audio (loads snd_bcm2835)
+dtparam=audio=on
+gpu_mem=304
+
+
+# ---------------------------------------------
+# Enable DPI
+# --------------------------------------------- 
+enable_dpi_lcd=1
+
+# ---------------------------------------------
+# Make DPI default output
+# ---------------------------------------------
+display_default_lcd=1
+
+# ---------------------------------------------
+# custom HDMI mode
+# https://www.raspberrypi.org/forums/viewtopic.php?p=613926#p613926
+# https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=24679
+# ---------------------------------------------
+dpi_group=2
+dpi_mode=87
+
+# Uncomment some or all of these to enable the optional hardware interfaces
+dtparam=i2c_arm=off
+dtparam=spi=off
+
+# Enable audio (loads snd_bcm2835)
+dtparam=audio=on
+
+# ---------------------------------------------
+# DPI output format definitions
+# https://www.raspberrypi.org/forums/viewtopic.php?p=628061#p628061
+# DPI structure: https://www.raspberrypi.org/forums/viewtopic.php?p=617719#p617719
+# ---------------------------------------------
+# output_format:
+#   1: DPI_OUTPUT_FORMAT_9BIT_666
+#   2: DPI_OUTPUT_FORMAT_16BIT_565_CFG1
+#   3: DPI_OUTPUT_FORMAT_16BIT_565_CFG2
+#   4: DPI_OUTPUT_FORMAT_16BIT_565_CFG3
+#   5: DPI_OUTPUT_FORMAT_18BIT_666_CFG1
+#   6: DPI_OUTPUT_FORMAT_18BIT_666_CFG2
+#   7: DPI_OUTPUT_FORMAT_24BIT_888
+#
+# rgb_order:
+#   1: DPI_RGB_ORDER_RGB
+#   2: DPI_RGB_ORDER_BGR
+#   3: DPI_RGB_ORDER_GRB
+#   4: DPI_RGB_ORDER_BRG
+#
+# output_enable_mode:
+#   0: DPI_OUTPUT_ENABLE_MODE_DATA_VALID
+#   1: DPI_OUTPUT_ENABLE_MODE_COMBINED_SYNCS
+#
+# invert_pixel_clock:
+#   0: RGB Data changes on rising edge and is stable at falling edge
+#   1: RGB Data changes on falling edge and is stable at rising edge
+#
+# hsync polarity: 
+#   0: default for HDMI mode
+#   1: inverted
+#
+# vsync polarity:
+#   0: default for HDMI mode
+#   1: inverted
+#
+# output_enable_polarity:
+#   0: default for HDMI mode
+#   1: inverted
+#
+# hsync phase:
+#   0: rising edge
+#   1: falling edge
+#
+# vsync phase:
+#   0: rising edge
+#   1: falling edge
+#
+# output_enable phase:
+#   0: rising edge
+#   1: falling edge
+# ---------------------------------------------
+dpi_output_format=483351
+
+# ---------------------------------------------
+# HDMI timing definitions
+#https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=24679
+# ---------------------------------------------
+# hdmi_timings= <h_active_pixels>
+#                 LCD module horizontal resolution
+#
+#               <h_sync_polarity>
+#                 0: active low
+#                 1: active high
+#
+#               <h_front_porch> 
+#               <h_sync_pulse>
+#               <h_back_porch>
+#               <v_active_lines>
+#                 LCD module vertical resolution
+#
+#               <v_sync_polarity>
+#                 0: active low
+#                 1: active high
+#
+#               <v_front_porch>
+#               <v_sync_pulse>
+#               <v_back_porch>
+#
+#               <v_sync_offset_a>
+#               <v_sync_offset_b>
+#               <pixel_rep>
+#
+#               <frame_rate>
+#                 screen refrech rate (50/60Hz supported only!)#
+#
+#               <interlaced>
+#
+#               <pixel_freq>
+#                 calculates as: <h_active_pixels> * <v_active_lines> * <frame_rate>
+#
+#               <aspect_ratio>
+#                 HDMI_ASPECT_4_3 = 1
+#                 HDMI_ASPECT_14_9 = 2
+#                 HDMI_ASPECT_16_9 = 3
+#                 HDMI_ASPECT_5_4 = 4
+#                 HDMI_ASPECT_16_10 = 5
+#                 HDMI_ASPECT_15_9 = 6
+#                 HDMI_ASPECT_21_9 = 7
+#                 HDMI_ASPECT_64_27 = 8
+# ---------------------------------------------
+hdmi_timings=800 0 16 16 64 1280 0 5 1 2 0 0 0 60 0 66800000 5
+

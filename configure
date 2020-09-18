@@ -18,14 +18,6 @@ cd build
   --enable-outdev=sdl2 \
   --enable-gpl \
   --enable-nonfree
-make -j4
-ls -l
-cd ..
-
-cd ../ffplay
-git pull
-make -j4
-ls -l
 
 cd ../linux
 
