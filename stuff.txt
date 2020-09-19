@@ -301,7 +301,10 @@ cmake .
 make
 }}}
 
-/etc/rc.local
+sudo dd if=/dev/sda of=/dev/sdb bs=32M status=progress
+
+sudo nano /etc/rc.local
+
 dtc -I dtb -O dts *.dtb
 
 git clone https://github.com/mypaint/libmypaint
