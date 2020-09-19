@@ -19,6 +19,6 @@ cd build
   --enable-gpl \
   --enable-nonfree
 
-cd ../linux
+cd ../../linux
 
 
