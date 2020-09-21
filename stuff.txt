@@ -307,6 +307,7 @@ sudo nano /etc/rc.local
 
 dtc -I dtb -O dts *.dtb
 
+{{{  mypaint
 git clone https://github.com/mypaint/libmypaint
 sudo apt -y install intltool
 sudo apt -y install libjson-c-dev
@@ -325,12 +326,22 @@ sudo make install
 
 git clone https://github.com/mypaint/mypaint
 cd mypaint
-
+}}}
+{{{  json-c
 git clone https://github.com/json-c/json-c.git
 mkdir build
 cd build
 cmake ..
+}}}
 
-sudo apt -y install xserver-xorg
-sudo apt -y install raspberrypi-ui-mods
-sudo apt -y install lxde-core lxappearance
+// mapnik  - https://github.com/mapnik/mapnik
+git clone https://github.com/mapnik/mapnik.git
+sudo apt -y install libpq-dev
+sudo apt -y install libgdal-dev
+sudo apt -y install libproj-dev
+sudo apt -y install libjpeg-dev
+sudo apt -y install libtiff-dev
+cd mapnik
+git submodule update --init
+./configure
+JOBS=4 make
