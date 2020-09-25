@@ -8,7 +8,6 @@ cd build
 ../configure \
   --disable-decoders --disable-encoders --disable-filters --disable-parsers --disable-protocols --disable-bsfs \
   --disable-demuxers --disable-muxers   --disable-indevs  --disable-outdevs --disable-doc --disable-ffprobe \
-  --disable-vaapi --disable-vdpau \
   --enable-protocol=concat,file \
   --enable-demuxer=mpegts,mp2,mp3,aac,h264,pcm_s16le,mjpeg,dvbsub \
   --enable-parser=aac,h264,mpeg4video,mpegvideo,mpegaudio,mjpeg,aac_latm,dvbsub \
@@ -17,8 +16,9 @@ cd build
   --enable-filter=transpose,aresample \
   --enable-outdev=sdl2 \
   --enable-gpl \
-  --enable-nonfree
+  --enable-nonfree \
+#  --disable-vaapi --disable-vdpau \
+#  --enable-libmfx
 
 cd ../../linux
-
 
