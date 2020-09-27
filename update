@@ -59,9 +59,5 @@ git pull
 cd ../ffplay
 git pull
 
-chmod 0777 update
-chmod 0777 configure
-chmod 0777 ffmpeg
-
 ls -l
 cd ../linux
