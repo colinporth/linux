@@ -17,6 +17,9 @@ cd build
   --enable-outdev=sdl2 \
   --enable-gpl \
   --enable-nonfree \
+  --enable-neon \
+  --cpu=cortex-a7 \
+  --extra-cflags='-mfpu=neon-vfpv4 -mtune=cortex-a7'
 #  --disable-vaapi --disable-vdpau \
 #  --enable-libmfx
 

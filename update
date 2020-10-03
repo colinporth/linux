@@ -18,7 +18,6 @@ cd ..
 git clone https://github.com/colinporth/linux
 git clone https://github.com/colinporth/shared
 git clone https://github.com/colinporth/openGL
-git clone https://github.com/colinporth/ffplay
 git clone https://github.com/ocornut/imgui
 git clone https://github.com/FFmpeg/FFmpeg
 git clone https://github.com/colinporth/gpio
@@ -54,9 +53,6 @@ cd ../imgui
 git pull
 
 cd ../FFmpeg
-git pull
-
-cd ../ffplay
 git pull
 
 ls -l

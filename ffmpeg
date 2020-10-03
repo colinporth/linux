@@ -7,11 +7,5 @@ mkdir -p build
 cd build
 make -j4
 ls -l
-cd ..
 
-cd ../ffplay
-git pull
-make -j4
-ls -l
-
-cd ../linux
+cd ../../linux
