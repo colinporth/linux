@@ -17,8 +17,6 @@ cd build
   --enable-outdev=sdl2 \
   --enable-gpl \
   --enable-nonfree \
-#  --disable-vaapi --disable-vdpau \
 #  --enable-libmfx
 
 cd ../../linux
-
