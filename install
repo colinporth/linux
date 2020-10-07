@@ -3,17 +3,21 @@ set -v
 sudo apt -y update
 sudo apt -y full-upgrade
 sudo apt -y autoremove
+#
 sudo apt -y install g++ nasm pkgconf cmake autoconf automake build-essential cmake binutils-dev libtool
 sudo apt -y install git git-cola
 sudo apt -y install libglfw3-dev libglew-dev libgles2-mesa-dev mesa-utils libasound2-dev  
 sudo apt -y install freeglut3 freeglut3-dev
+#
 sudo apt -y install libsdl2-2.0-0 libsdl2-image-2.0-0 libx264-dev libsdl2-dev libsdl2-image-dev
-sudo apt -y install samba smbclient libsmbclient-dev matchbox-keyboard smartmontools gparted
 sudo apt -y install libfreetype6-dev libfreetype6
-sudo apt -y install clang
-sudo apt -y install acpi iotop nethogs
+sudo apt -y install libmfx-dev
 sudo apt -y install libfdk-aac-dev
-
+#
+sudo apt -y install clang
+sudo apt -y install samba smbclient libsmbclient-dev matchbox-keyboard smartmontools gparted
+sudo apt -y install acpi iotop nethogs
+#
 cd ..
 git clone https://github.com/colinporth/linux
 git clone https://github.com/colinporth/shared
