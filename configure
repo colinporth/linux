@@ -18,6 +18,6 @@ cd build
   --enable-outdev=sdl2 \
   --enable-gpl \
   --enable-nonfree \
-#  --enable-libmfx
+  --enable-libmfx \
 
 cd ../../linux
