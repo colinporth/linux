@@ -4,7 +4,6 @@ sudo apt -y update
 sudo apt -y full-upgrade
 sudo apt -y autoremove
 
-cd linux
 git pull
 
 cd ../shared
