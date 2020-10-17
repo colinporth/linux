@@ -20,7 +20,8 @@ cd build
   --enable-neon \
   --cpu=cortex-a7 \
   --extra-cflags='-mfpu=neon-vfpv4 -march=native'
-  --disable-vaapi --disable-vdpau \
+  --disable-vdpau \
+#  --disable-vaapi 
 #  --enable-libmfx
 
 cd ../../linux
