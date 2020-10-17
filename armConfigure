@@ -19,9 +19,8 @@ cd build
   --enable-nonfree \
   --enable-neon \
   --cpu=cortex-a7 \
-  --extra-cflags='-mfpu=neon-vfpv4 -march=native'
-  --disable-vdpau \
-#  --disable-vaapi 
+  --extra-cflags='-mfpu=neon-vfpv4 -march=native' \
+  --disable-vdpau --disable-vaapi 
 #  --enable-libmfx
 
 cd ../../linux
