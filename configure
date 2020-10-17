@@ -5,7 +5,6 @@ git pull
 
 mkdir -p build
 cd build
-
 ../configure \
   --disable-decoders --disable-encoders --disable-filters --disable-parsers --disable-protocols --disable-bsfs \
   --disable-demuxers --disable-muxers   --disable-indevs  --disable-outdevs --disable-doc --disable-ffprobe \
@@ -19,5 +18,12 @@ cd build
   --enable-gpl \
   --enable-nonfree \
   --enable-libmfx \
+  --extra-cflags='-march=native'
+
+#  --extra-cflags='-mpu=neon-vfpv4 -mtune=cortex-a7' \
+#  --enable-neon \
+#  --cpu=cortex-a7 \
+#  --disable-vaapi --disable-vdpau \
 
 cd ../../linux
+
