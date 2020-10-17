@@ -19,7 +19,7 @@ cd build
   --enable-nonfree \
   --enable-neon \
   --cpu=cortex-a7 \
-  --extra-cflags='-mfpu=neon-vfpv4 -mtune=cortex-a7'
+  --extra-cflags='-mfpu=neon-vfpv4 -march=native'
   --disable-vaapi --disable-vdpau \
 #  --enable-libmfx
 
