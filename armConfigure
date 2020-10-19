@@ -18,10 +18,9 @@ cd build
   --enable-gpl \
   --enable-nonfree \
   --enable-neon \
-  --extra-cflags='-mfpu=neon-vfpv4 -march=native' \
-#  --cpu=cortex-a7 \
-#  --disable-vdpau --disable-vaapi 
-#  --enable-libmfx
+  --extra-cflags='-march=native' \
+
+#  --extra-cflags='-mfpu=neon-vfpv4 -march=native' \
 
 cd ../../linux
 
