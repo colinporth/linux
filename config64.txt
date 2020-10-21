@@ -16,7 +16,8 @@ framebuffer_height=768
 dpi_output_format=0x105
 dpi_group=2
 dpi_mode=87
-dpi_timings=1368 0 0 64 0 768 0 0 7 0 0 0 0 60 0 66495000 3
+dpi_timings=1368 0 0 64 0 768 0 0 7 0 0 0 0 50 0 55490000 3
+#dpi_timings=1368 0 0 64 0 768 0 0 7 0 0 0 0 60 0 66495000 3
 #
 # 1024x600
 #framebuffer_width=1024
