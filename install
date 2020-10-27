@@ -22,11 +22,9 @@ cd ..
 git clone https://github.com/colinporth/linux
 git clone https://github.com/colinporth/shared
 git clone https://github.com/colinporth/openGL
-git clone https://github.com/ocornut/imgui
 git clone https://github.com/FFmpeg/FFmpeg
 git clone https://github.com/colinporth/gpio
 git clone https://github.com/colinporth/opt
-git clone https://github.com/colinporth/pixman
 
 mkdir -p tv
 chmod 0777 tv

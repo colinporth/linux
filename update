@@ -15,9 +15,6 @@ git pull
 cd tv
 make -j4
 
-cd ../radio
-make -j4
-
 cd ../hls
 make -j4
 
@@ -25,9 +22,6 @@ cd ../../gpio
 git pull
 
 cd ../opt
-git pull
-
-cd ../imgui
 git pull
 
 ls -l
