@@ -25,6 +25,13 @@ git clone https://github.com/colinporth/openGL
 git clone https://github.com/FFmpeg/FFmpeg
 git clone https://github.com/colinporth/gpio
 git clone https://github.com/colinporth/opt
+#
+# dvblast
+sudo apt -y install libev-dev
+sudo apt -y install ttf-bitstream-vera
+git clone https://github.com/colinporth/dvblast
+cd dvblast
+sudo make install
 
 mkdir -p tv
 chmod 0777 tv
