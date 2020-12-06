@@ -18,6 +18,9 @@ make -j4
 cd ../hls
 make -j4
 
+cd ../dvblast
+make -j4
+
 cd ../../gpio
 git pull
 
