@@ -3,6 +3,7 @@ set -v
 sudo apt -y update
 sudo apt -y full-upgrade
 sudo apt -y autoremove
+sudo apt -y autoclean
 #
 sudo apt -y install g++ nasm pkgconf cmake autoconf automake build-essential cmake binutils-dev libtool
 sudo apt -y install git git-cola
